@@ -1,0 +1,76 @@
+\documentclass[presentation]{beamer}
+\mode<presentation>{
+    \usetheme{AMSBolognaFC}
+}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\title[Presentations with Beamer]{A quick introduction to the creation of presentations in Latex with Beamer}
+
+\author[Elena Yan et al.]{
+	Elena Yan$^{*}$
+	\and 
+	Someone Else$^{**}$
+}
+
+\institute[UniBo]{
+    $^{*}$Dipartimento di Informatica -- Scienza e Ingegneria (DISI)
+    \\
+    \textsc{Alma Mater Studiorum} -- Università di Bologna
+    \\
+    \texttt{elena.yan@studio.unibo.it}
+    \vspace{.3cm}
+    \\
+    \texttt{foo.bar@mail.com}
+}
+
+\date[Latex workshop, 2020]{
+	1$^{st}$ Local Workshop on Latex
+	\\
+	June 1, 2020, Cesena, Italy
+}
+
+% \AtBeginSection[]{
+% \begin{frame}<beamer>[c,noframenumbering]
+%     \frametitle{Next in Line\ldots}
+%     \tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide]
+% \end{frame}
+% }
+
+% \AtBeginSubsection[]{
+% \begin{frame}<beamer>[shrink,noframenumbering]
+%     \frametitle{Focus on\ldots}
+% 	\vfill
+% 	\tableofcontents[currentsubsection,sectionstyle=shaded,subsectionstyle=show/shaded]
+% 	\vfill
+% \end{frame}
+% }
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}\frametitle{Foo}
+
+Bar
+
+\end{frame}
+
+\section*{}
+
+\frame{\titlepage}
+
+\section*{\bibname}
+
+\setbeamertemplate{page number in head/foot}{}
+\nocite{*}
+\begin{frame}[t,allowframebreaks,noframenumbering]
+    \frametitle{\refname}
+	\footnotesize
+    \bibliographystyle{plain}
+	\bibliography{references}
+\end{frame}
+
+\end{document}
